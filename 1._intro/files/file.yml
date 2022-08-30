@@ -1,0 +1,6 @@
+person:
+  age: 23
+  height: 188
+  skills:
+    - "python"
+    - "js"

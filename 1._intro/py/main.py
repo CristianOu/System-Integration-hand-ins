@@ -18,10 +18,10 @@ with open('../files/file.csv', newline='') as csv_file:
     print(row['first_name'], row['last_name'])
 
 print("===TXT===")
-dictionary = {}
+response = {}
 with open('../files/file') as file:
   lines = file.readlines()
   for line in lines:
     (key, value) = line.split()
-    dictionary[key] = value
-  print("Course:", dictionary["course"])
+    response[key] = value
+  print("Course:", response["course"])

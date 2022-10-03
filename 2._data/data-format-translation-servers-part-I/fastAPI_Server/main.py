@@ -12,19 +12,15 @@ app = FastAPI()
 def _():
     f = open('../../../1._intro/files/file.json')
     response = json.load(f)
-
     return response
 
 @app.get("/csv")
 def _():
     with open('../../../1._intro/files/file.csv', newline='') as csv_file:
         reader = csv.DictReader(csv_file)
-
         response = {}
-        
         for row in reader:
             response.update(row) 
-            
         return response
 
 @app.get("/txt")

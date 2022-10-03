@@ -6,16 +6,12 @@ const fs = require('fs')
 const yaml = require('js-yaml')
 const xml2js = require('xml2js')
 
-app.get("/txt", (req, res) => {
-  
-});
-
 app.get("/xml", (req, res) => {
   const parser = new xml2js.Parser();
   try {
     fs.readFile('../../../1._intro/files/file.xml', function (err, data) {
       parser.parseString(data, function (err, result) {
-        console.log('res',result)
+        // console.log('res',result)
         res.send(result);
       });
     });

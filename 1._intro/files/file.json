@@ -1,3 +1,6 @@
 {
-  "ocupation": "student"
+  "person": {
+    "occupation": "student",
+    "skills": ["js", "python"]
+  }
 }

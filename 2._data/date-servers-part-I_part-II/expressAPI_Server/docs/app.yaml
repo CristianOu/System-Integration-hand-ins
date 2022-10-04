@@ -1,0 +1,13 @@
+paths:
+  /timestamp:
+    get:
+      summary: get the current timestamp fetched from fast_API
+      responses:
+        201:
+          description: An object with current timestamp fetched from fast_API
+  /express_api_timestamp:
+    get:
+      summary: get the current timestamp
+      responses:
+        201:
+          description: An object with current timestamp

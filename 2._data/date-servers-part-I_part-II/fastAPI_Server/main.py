@@ -4,6 +4,9 @@
 # $ poetry shell
 # $ uvicorn main:app --reload
 
+# Documentation through SwaggerUI is automatically generated and 
+# can be accessed on "http://127.0.0.1:8000/docs"
+
 from fastapi import FastAPI
 from datetime import datetime
 import requests

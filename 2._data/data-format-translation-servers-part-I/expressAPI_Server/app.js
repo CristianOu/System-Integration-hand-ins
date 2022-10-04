@@ -6,13 +6,17 @@ const fs = require('fs')
 const yaml = require('js-yaml')
 const xml2js = require('xml2js')
 
+// Read, parse XML and send response
 app.get("/xml", (req, res) => {
   const parser = new xml2js.Parser();
   try {
     fs.readFile('../../../1._intro/files/file.xml', function (err, data) {
       parser.parseString(data, function (err, result) {
-        // console.log('res',result)
-        res.send(result);
+        if (result) {
+          res.send(result.person);
+        } else {
+          res.send('Internal Error');
+        }
       });
     });
   } catch (error) {
@@ -20,11 +24,16 @@ app.get("/xml", (req, res) => {
   }
 });
 
+// Read, parse YML and send response
 app.get("/yml", (req, res) => {
   try {
     let fileContents = fs.readFileSync('../../../1._intro/files/file.yml', 'utf8');
     let response = yaml.load(fileContents);
-    res.send(response)
+    if (response) {
+      res.send(response)
+    } else {
+      res.send('Internal Error')
+    }
   } catch (error) {
     console.log(error)
   }

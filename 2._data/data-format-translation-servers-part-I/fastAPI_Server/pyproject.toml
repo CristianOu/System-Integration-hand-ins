@@ -7,7 +7,7 @@ authors = ["Cristian OU <mccrys_00@yahoo.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.81.0"
-uvicorn = "^0.18.3"
+uvicorn = {extras = ["standard"], version = "^0.18.3"}
 requests = "^2.28.1"
 
 [tool.poetry.dev-dependencies]

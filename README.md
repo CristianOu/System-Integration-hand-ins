@@ -10,8 +10,8 @@ Create at least two servers in two different programming languages with REST API
 You are allowed to split the responsibility between the servers if you are pressed for time. I.e. ServerA reads XML, CSV. ServerB reads YAML, TXT, JSON.
 
 2.2. Date servers - Part I and Part II
-Part I: You should create two new servers (important that you don’t reuse the same two servers from this weeks’ other assignment since loose coupling is emphasized during this course). Both will be the “date authority” and when GET requesting /timestamp provide a current timestamp (ISO 8601).
-Part II: Integrate the date servers from last week.
+- Part I: You should create two new servers (important that you don’t reuse the same two servers from this weeks’ other assignment since loose coupling is emphasized during this course). Both will be the “date authority” and when GET requesting /timestamp provide a current timestamp (ISO 8601).
+- Part II: Integrate the date servers from last week.
 For example when a client requests a timestamp from server A then server A requests the time from server B and responds with the time to the client.
 
 Generate documentation for the some/all of the REST APIs created last week (data format translation, date authority).
